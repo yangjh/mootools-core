@@ -25,7 +25,7 @@ Event.implement('remove', function(){
 		error: 1, abort: 1, scroll: 1 //misc
 	};
 
-	[Element, Window, Document].call('implement', {
+	[Element, Window, Document].invoke('implement', {
 		
 		hasEvent: function(type){
 			var eventTypes = this.retrieve('event.types'), eventType, eventName;

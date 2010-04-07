@@ -140,7 +140,7 @@ Document.implement({
 
 // search and find, Slick integration
 
-[Document, Element].call('implement', {
+[Document, Element].invoke('implement', {
 	
 	search: function(expression){
 		return Slick(this, expression, new Elements);

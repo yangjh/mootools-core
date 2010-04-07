@@ -13,7 +13,7 @@ Event.defineModifier('domready', {add: function(fn){
 var domready = function(){
 	if (Browser.loaded) return;
 	Browser.loaded = true;
-	[document, window].call('fireEvent', 'domready');
+	[document, window].invoke('fireEvent', 'domready');
 };
 
 window.addEvent('load:flash', domready);
